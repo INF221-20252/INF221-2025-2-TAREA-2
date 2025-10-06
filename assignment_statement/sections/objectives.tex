@@ -75,16 +75,16 @@ donde \texttt{ProdTotal} es la productividad máxima que se puede obtener al for
 \begin{verbatim}
 5
 10 5 cpp
--8 3 python
-6 4 cpp
+-8 9 python
+-20 4 cpp
 -7 2 java
-5 5 cpp
+30 -5 cpp
 \end{verbatim}
 
 \subsubsection*{Ejemplo de salida}
 
 \begin{verbatim}
-26
+31
 \end{verbatim}
 
 \subsubsection*{Explicación}
@@ -93,25 +93,28 @@ donde \texttt{ProdTotal} es la productividad máxima que se puede obtener al for
 Se pueden formar los siguientes equipos para maximizar la productividad:
 
 \begin{itemize}
-    \item \textbf{Equipo 1:} Empleados 1, 2, 3  
+    \item \textbf{Equipo 1:} Empleados $1$
         \begin{itemize}
-            \item Lenguaje más frecuente: \texttt{cpp} (empleados 1 y 3)  
-            \item Productividad: 
-            \[
-            (10 + 6) + B_2 = 16 + 3 = 19
-            \]
+            \item Lenguaje más frecuente: \texttt{cpp} (empleados $1$)  
+            \item Productividad: $A_1 = 10$
         \end{itemize}
-    \item \textbf{Equipo 2:} Empleados 4 y 5  
+    \item \textbf{Equipo 2:} Empleados $2$, $3$ y $4$
         \begin{itemize}
-            \item Frecuencia máxima de lenguajes: \texttt{java} y \texttt{cpp} aparecen una vez cada uno  
-            \item Para desempatar, se elige el lenguaje que genere la mínima productividad del equipo (regla del problema)  
+            \item Frecuencia máxima de lenguajes: \texttt{cpp}, \texttt{python} y \texttt{java} aparecen una vez cada uno  
+            \item Para desempatar, se elige el lenguaje que genere la mínima productividad del equipo
             \item Productividad:  
             \begin{itemize}
-                \item Lenguaje \texttt{java}: $(7) + B_5 = 7 + 5 = 12$  
-                \item Lenguaje \texttt{cpp}: $(5) + B_4 = 5 + 2 = 7$  
+                \item Lenguaje \texttt{cpp}: $A_2 + B_3 + B_4 = -8 + 4 + 2 = -2$  
+                \item Lenguaje \texttt{python}: $B_2 + A_3 + B_4 = 9 + (-20) + 2 = -9$  
+                \item Lenguaje \texttt{java}: $B_2 + B_3 + A_4 = 9 + 4 + (-7) = 6$
             \end{itemize}
-            \item Elegimos el mínimo: 7
+            \item Elegimos el mínimo: $-9$
+        \end{itemize}
+    \item \textbf{Equipo 3:} Empleado $5$
+        \begin{itemize}
+            \item Lenguaje más frecuente: \texttt{cpp} (empleado $5$)  
+            \item Productividad: $A_5 = 30$
         \end{itemize}
 \end{itemize}
 
-La productividad total máxima se obtiene sumando los equipos: $19 + 7 = 26$.
+La productividad total máxima se obtiene sumando los equipos: $10 + (-9) + 30 = 31$.
