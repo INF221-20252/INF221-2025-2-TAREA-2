@@ -21,5 +21,3 @@ Contiene la plantilla de los archivos que deberán estar presentes en la entrega
 
 ### `report`
 En esta carpeta se encuentra la plantilla en LaTeX para la elaboración del informe correspondiente a la tarea.
-
-***Para obtener información más detallada sobre el contenido de cada carpeta, se recomienda revisar los archivos README ubicados dentro de ellas.***
