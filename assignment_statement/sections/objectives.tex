@@ -70,7 +70,7 @@ ProdTotal
 
 donde \texttt{ProdTotal} es la productividad máxima que se puede obtener al formar los equipos de acuerdo a las reglas descritas anteriormente.
 
-\subsubsection*{Ejemplo de entrada}
+\subsubsection*{Ejemplo de entrada 1}
 
 \begin{verbatim}
 5
@@ -81,13 +81,13 @@ donde \texttt{ProdTotal} es la productividad máxima que se puede obtener al for
 30 -5 cpp
 \end{verbatim}
 
-\subsubsection*{Ejemplo de salida}
+\subsubsection*{Ejemplo de salida 1}
 
 \begin{verbatim}
 31
 \end{verbatim}
 
-\subsubsection*{Explicación}
+\subsubsection*{Explicación 1}
 
 
 Se pueden formar los siguientes equipos para maximizar la productividad:
@@ -118,3 +118,50 @@ Se pueden formar los siguientes equipos para maximizar la productividad:
 \end{itemize}
 
 La productividad total máxima se obtiene sumando los equipos: $10 + (-9) + 30 = 31$.
+
+\newpage
+
+\subsubsection*{Ejemplo de entrada 2}
+
+\begin{verbatim}
+6
+10 5 cpp
+-5 20 c
+30 -5 cpp
+20 -1 java
+-10 10 python
+10 5 java
+\end{verbatim}
+
+\subsubsection*{Ejemplo de salida 2}
+
+\begin{verbatim}
+100
+\end{verbatim}
+
+\subsubsection*{Explicación 2}
+
+Se pueden formar los siguientes equipos para maximizar la productividad total:
+
+\begin{itemize}
+    \item \textbf{Equipo 1:} Empleados $1$, $2$ y $3$
+        \begin{itemize}
+            \item Lenguaje más frecuente: \texttt{cpp} (empleados $1$ y $3$)
+            \item Productividad: 
+            \[
+            p_1(\texttt{cpp}) + p_2(\texttt{cpp}) + p_3(\texttt{cpp})
+            = A_1 + B_2 + A_3 = 10 + 20 + 30 = 60
+            \]
+        \end{itemize}
+    \item \textbf{Equipo 2:} Empleados $4$, $5$ y $6$
+        \begin{itemize}
+            \item Lenguaje más frecuente: \texttt{java} (empleados $4$ y $6$)
+            \item Productividad:
+            \[
+            p_4(\texttt{java}) + p_5(\texttt{java}) + p_6(\texttt{java})
+            = A_4 + B_5 + A_6 = 20 + 10 + 10 = 40
+            \]
+        \end{itemize}
+\end{itemize}
+
+La productividad total máxima es: $60 + 40 = 100$.
